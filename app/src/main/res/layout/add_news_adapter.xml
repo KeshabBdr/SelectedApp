@@ -1,175 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="5dp"
-    android:scrollbars="none">
-    <LinearLayout
+    android:orientation="vertical">
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <RelativeLayout
+        android:layout_height="40dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/your_news"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtCloseNewsCreate"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/circlebackground"
+            android:gravity="center"
+            android:text="@string/x"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@color/colorPrimary">
-            <TextView
-                android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/newsTitleText"
+                android:layout_width="355dp"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
-                android:textColor="@android:color/white"
-                android:text="@string/your_news"
+                android:layout_marginStart="5dp"
                 android:layout_marginLeft="5dp"
-                android:layout_marginTop="10dp"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
-                android:layout_marginStart="5dp" />
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:hint="@string/text_hint_title"
+                android:textColorHighlight="@color/colorPrimaryDark"
+                app:met_floatingLabel="highlight"
+                app:met_maxCharacters="30"
+                app:met_textColorHint="@color/colorAccent" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/newsDescriptionText"
+                android:layout_width="355dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="start"
+                android:hint="@string/text_news_description"
+                android:textAlignment="textStart"
+                android:textColorHighlight="@color/colorPrimaryDark"
+                app:met_floatingLabel="highlight"
+                app:met_maxCharacters="200"
+                app:met_textColorHint="@color/colorAccent" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/newsLocationText"
+                android:layout_width="355dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:hint="@string/text_news_location"
+                android:textColorHighlight="@color/colorPrimaryDark"
+                app:met_floatingLabel="highlight"
+                app:met_maxCharacters="30"
+                app:met_textColorHint="@color/colorAccent" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/newsStartDateText"
+                android:layout_width="355dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:hint="@string/pick_start_date"
+                android:textColorHighlight="@color/colorPrimaryDark"
+                app:met_floatingLabel="highlight"
+                app:met_textColorHint="@color/colorAccent" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/newsEndDateText"
+                android:layout_width="355dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:hint="@string/pick_end_date"
+                android:textColorHighlight="@color/colorPrimaryDark"
+                app:met_floatingLabel="highlight"
+                app:met_textColorHint="@color/colorAccent" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/newsTimeText"
+                android:layout_width="355dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:hint="@string/pick_program_time"
+                android:textColorHighlight="@color/colorPrimaryDark"
+                app:met_floatingLabel="highlight"
+                app:met_textColorHint="@color/colorAccent" />
+
             <TextView
-                android:id="@+id/txtCloseNewsCreate"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_gravity="end"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="5dp"
-                android:background="@drawable/circlebackground"
-                android:gravity="center"
-                android:text="@string/x"
-                android:textColor="@android:color/white"
-                android:textStyle="bold" />
-        </RelativeLayout>
-        <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/newsTitleText"
-            android:layout_width="355dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/text_hint_title"
-            android:layout_marginLeft="5dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginEnd="5dp"
-            app:met_textColorHint="@color/colorAccent"
-            android:textColorHighlight="@color/colorPrimaryDark"
-            app:met_maxCharacters="30"
-            app:met_floatingLabel="highlight"/>
-        <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/newsDescriptionText"
-            android:layout_width="355dp"
-            android:layout_height="150dp"
-            android:hint="@string/text_news_description"
-            android:layout_marginLeft="5dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginEnd="5dp"
-            android:textAlignment="textStart"
-            app:met_textColorHint="@color/colorAccent"
-            android:textColorHighlight="@color/colorPrimaryDark"
-            app:met_maxCharacters="200"
-            app:met_floatingLabel="highlight"
-            android:gravity="start" />
-        <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/newsLocationText"
-            android:layout_width="355dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/text_news_location"
-            android:layout_marginLeft="5dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginEnd="5dp"
-            app:met_textColorHint="@color/colorAccent"
-            android:textColorHighlight="@color/colorPrimaryDark"
-            app:met_maxCharacters="30"
-            app:met_floatingLabel="highlight"/>
-        <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/newsStartDateText"
-            android:layout_width="355dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/pick_start_date"
-            android:layout_marginLeft="5dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginEnd="5dp"
-            app:met_textColorHint="@color/colorAccent"
-            android:textColorHighlight="@color/colorPrimaryDark"
-            app:met_floatingLabel="highlight"/>
-        <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/newsEndDateText"
-            android:layout_width="355dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/pick_end_date"
-            android:layout_marginLeft="5dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginEnd="5dp"
-            app:met_textColorHint="@color/colorAccent"
-            android:textColorHighlight="@color/colorPrimaryDark"
-            app:met_floatingLabel="highlight"/>
-        <com.rengwuxian.materialedittext.MaterialEditText
-            android:id="@+id/newsTimeText"
-            android:layout_width="355dp"
-            android:layout_height="wrap_content"
-            android:hint="@string/pick_program_time"
-            android:layout_marginLeft="5dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginEnd="5dp"
-            app:met_textColorHint="@color/colorAccent"
-            android:textColorHighlight="@color/colorPrimaryDark"
-            app:met_floatingLabel="highlight"/>
-        <TextView
-            android:layout_width="355dp"
-            android:layout_height="wrap_content"
-            android:textStyle="normal"
-            android:textSize="17.8sp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginTop="4dp"
-            android:textColor="@color/colorPrimary"
-            android:text="@string/choose_your_club"/>
-        <Spinner
-            android:id="@+id/spinner_club"
-            android:layout_width="355dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginTop="4dp"/>
-        <TextView
-            android:layout_width="355dp"
-            android:layout_height="wrap_content"
-            android:textStyle="normal"
-            android:textSize="17.8sp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginTop="4dp"
-            android:textColor="@color/colorPrimary"
-            android:text="@string/choose_your_an_image"/>
-        <ImageView
-            android:id="@+id/newsImageSelect"
-            android:layout_width="355dp"
-            android:layout_height="255dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginTop="4dp"
-            android:layout_gravity="center_vertical|center_horizontal"
-            android:src="@drawable/colorlogo_rotaractnepalapp"/>
-        <com.gc.materialdesign.views.ButtonRectangle
-            android:id="@+id/button"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="5dp"
-            android:background="@color/btn_color"
-            android:text="@string/upload_news"
-            android:layout_gravity="right"
-            android:layout_marginEnd="5dp" />
-    </LinearLayout>
-</ScrollView>
+                android:layout_width="355dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:text="@string/choose_your_club"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17.8sp"
+                android:textStyle="normal" />
+
+            <Spinner
+                android:id="@+id/spinner_club"
+                android:layout_width="355dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp" />
+
+            <TextView
+                android:layout_width="355dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:text="@string/choose_your_an_image"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17.8sp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/newsImageSelect"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/image_upload"/>
+
+            <com.gc.materialdesign.views.ButtonRectangle
+                android:id="@+id/button"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/btn_color"
+                android:text="@string/upload_news" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

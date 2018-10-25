@@ -16,8 +16,4 @@
         android:layout_marginBottom="22dp"
         android:src="@drawable/news"
         android:id="@+id/createNews"/>
-    <include layout="@layout/news_adapter"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_margin="5dp"/>
 </RelativeLayout>
